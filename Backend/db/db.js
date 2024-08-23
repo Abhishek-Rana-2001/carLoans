@@ -1,10 +1,7 @@
-const sqlite3 = require('sqlite3').verbose();
-const dbName = "database.db"
+const mongoose = require("mongoose")
 
-const db = new sqlite3.Database(dbName, (err)=>{
-    if(err){
-        console.error(err)
-    }else{
-        console.log("Connected to Database")
-    }
-});
+mongoose.connect(process.env.MONGO_URI).then(()=>{
+    console.log("DB Connected")
+}).catch(err=>{
+    console.error("Connection to DB failed", err)
+})

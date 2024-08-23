@@ -15,7 +15,7 @@ const SelectRadioInput = ({ children, value, onChange, fieldName, selectedField 
     <>
       <div
         onClick={handleClick}
-        className={` md:w-11/12 w-full flex justify-center p-2 text-lg items-center shadow-md hover:cursor-pointer ${selectedField === value ? "bg-purple-500 text-white" : ""} hover:border-purple-500 border border-slate-300 rounded-lg`} 
+        className={` md:w-11/12 max-w-1/2 w-full flex justify-center p-2 text-lg items-center shadow-md hover:cursor-pointer ${selectedField === value ? "bg-purple-500 text-white" : ""} hover:border-purple-500 border border-slate-300 rounded-lg`} 
       >
         <label className="hover:cursor-pointer text-sm">{children}</label>
       </div>

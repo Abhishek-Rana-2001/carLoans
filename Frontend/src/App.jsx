@@ -7,9 +7,9 @@ import { FormProvider } from './context/FormContext'
 function App() {
 
   return (
-      <FormProvider>
-    <div className='min-h-screen'>
+    <FormProvider>
     <Navbar/>
+      <div className='h-screen '>
     <Outlet/>
     </div>
     </FormProvider>
