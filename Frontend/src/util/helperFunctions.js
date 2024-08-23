@@ -6,10 +6,5 @@ export const isAboveEighteen = (date) => {
     currentDate.getMonth(),
     currentDate.getDate()
   );
-  console.log(currentDate)
-  console.log(selectedDate)
-  console.log(eighteenYearsAgo)
-
-  console.log(selectedDate < eighteenYearsAgo)
   return selectedDate < eighteenYearsAgo;
 };

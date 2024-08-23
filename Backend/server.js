@@ -1,18 +1,27 @@
 const express = require("express")
 const app = express()
 const cors = require("cors")
-const port  = process.env.PORT || 8080
+const port  = process.env.PORT || 5000
+const leadRouter = require("./routes/leadRoutes")
+const bodyParser = require('body-parser');
+const db = require("./db/db")
 
-app.use(cors({
-    origin:"*"
-}))
+const corsOptions = {
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-type", "Authorization"]
+}
 
-app.get("/",(req, res)=>{
-    console.log("worked")
-    res.send("worked")
+app.use(cors(corsOptions))
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+app.get("/", (req, res)=>{
+    res.json({status: "ok"})
 })
 
-
+app.use("/apply", leadRouter)
 
 app.listen(port ,()=>{
     console.log(`server running on port:- ${port}`)
