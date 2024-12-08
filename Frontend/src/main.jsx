@@ -8,6 +8,7 @@ import Home from './pages/Home.jsx'
 import { FormProvider } from './context/FormContext.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
+import Offer from './components/Offer.jsx'
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path:"/application",
         element:<Application/>
+      },
+      {
+        path:"/offer",
+        element:<Offer/>
       },
       {
         path:"/about",
