@@ -188,7 +188,10 @@ export const questions = [
       {
         fieldName: "rentownhome",
         type: "select",
-        options: [{ name: "Rent",value: "Rent" }, { name: "Own",value: "Own" }],
+        options: [
+          { name: "Rent", value: "Rent" },
+          { name: "Own", value: "Own" },
+        ],
       },
       {
         fieldName: "home_monthly",
@@ -199,4 +202,43 @@ export const questions = [
     ],
     type: "selectandinput",
   },
+  {
+    question: "What is your name?",
+    subtext: null,
+    fields: [
+      {
+        fieldName: "fname",
+        type: "text",
+        placeholder:"First Name",
+      },
+      {
+        fieldName: "lname",
+        type: "text",
+        placeholder: "Last Name",
+      },
+    ],
+    type: "multipleTextInput",
+  },
+  // {
+  //   question: "What is your email?",
+  //   subtext: null,
+  //   fields: [
+  //     {
+  //       fieldName: "email",
+  //       type: "text",
+  //       placeholder:"Email",
+  //     },
+  //     // {
+  //     //   fieldName: "lname",
+  //     //   type: "text",
+  //     //   placeholder: "Last Name",
+  //     // },
+  //   ],
+  //   type: "multipleTextInput",
+  // },
+  // {
+  //   question:
+  //     "By ticking this checkbox, you authorize us to extend our support through email, SMS, or other electronic channels, delivering offers finely attuned to your preferences based on the information you've shared. Expect a diverse array of products and services, not only from our organization but also from esteemed third-party entities like financial agencies, insurance providers, and dealerships—all tailored to your eligibility. SMS message and data rates may apply. Message frequency varies and recurring messages may happen. You can opt out by responding STOP at any time. Additionally, you may respond with HELP for assistance.",
+  //   type:"checkbox",
+  // },
 ];

@@ -62,8 +62,6 @@ const ApplicationForm = () => {
       setFormData(defaultSchema);
     };
   }, []);
-
-  console.log(formData);
   
 
   return (
