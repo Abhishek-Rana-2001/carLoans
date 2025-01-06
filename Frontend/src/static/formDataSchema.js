@@ -20,5 +20,6 @@ export const defaultSchema = {
     addresslength:"",
     addresslength_months:"",
     rentownhome:"",
-    home_monthly:""
+    home_monthly:"",
+    terms:false,
 }

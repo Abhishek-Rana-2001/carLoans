@@ -15,8 +15,6 @@ const Navbar = () => {
     height:window.innerHeight
   })
 
-  console.log(location.pathname)
-
 
   useEffect(()=>{
     const handleResize =  ()=>{
@@ -36,7 +34,7 @@ const Navbar = () => {
   },[])
 
 const whitePath = [
-  "/offer" , 
+"" 
 ]
 
   return (
