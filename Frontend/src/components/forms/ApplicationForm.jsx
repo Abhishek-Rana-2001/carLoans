@@ -10,6 +10,8 @@ import useFormContext from "../../hooks/useFormContext";
 import { isAboveEighteen } from "../../util/helperFunctions";
 import MultipleInput from "../fields/MultipleInput";
 import SelectAndInput from "../fields/SelectAndInput";
+import axios from "axios"
+import {BASE_URL} from "../../api/api"
 
 const ApplicationForm = () => {
   const { step, setStep, formData, setFormData } = useFormContext();
@@ -35,8 +37,14 @@ const ApplicationForm = () => {
     setStep(step + 1);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
+    await axios.post(`${BASE_URL}/apply`, formData)
+    .then((res)=>{
+      navigate("/offer")
+    }).catch((err)=>{
+      console.error(err)
+    })
   };
 
   const handleBack = () => {
@@ -54,6 +62,9 @@ const ApplicationForm = () => {
       setFormData(defaultSchema);
     };
   }, []);
+
+  console.log(formData);
+  
 
   return (
     <form
