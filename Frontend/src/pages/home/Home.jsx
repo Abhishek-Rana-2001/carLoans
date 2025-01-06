@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Fleet from "../../components/Fleet"
 import { useRef } from "react";
 import Footer from "../../components/Footer";
+import Process from "./Process";
 
 const fadeInVariantsLeft = {
   initial: {
@@ -64,6 +65,8 @@ const Home = () => {
 
   return (
     <div>
+
+    {/* Hero section */}
       <div className="flex sm:flex-row flex-col justify-center items-center gap-10 min-h-screen mx-auto md:p-40 p-3">
         <section
           className="md:w-2/4 min-h-full flex flex-col md:gap-10  gap-5 justify-center items-center"
@@ -95,6 +98,14 @@ const Home = () => {
           <img src="/LandingCar.png"></img>
         </motion.section>
       </div>
+
+
+{/* Process Section */}
+
+<Process/>
+
+
+
       <motion.section
         ref={trustSection}
         style={{
